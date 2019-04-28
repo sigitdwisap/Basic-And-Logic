@@ -51,7 +51,7 @@ class BinarySearchTree {
     }
 
     // This method mainly calls InorderRec() 
-    void inorder()  {
+    void inorder() {
         System.out.println();
         System.out.println("Inorder transversal of BST");
         inorderRec(root);
@@ -67,10 +67,9 @@ class BinarySearchTree {
     }
 
     // A utility function to search a given key in BST
-    private Node search(Node root, int key)
-    {
+    private Node search(Node root, int key) {
         // Base Cases: root is null or key is present at root
-        if (root==null || root.key==key)
+        if (root == null || root.key == key)
             return root;
 
         // val is greater than root's key
