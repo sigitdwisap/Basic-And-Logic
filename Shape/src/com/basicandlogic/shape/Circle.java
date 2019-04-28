@@ -2,13 +2,9 @@ package com.basicandlogic.shape;
 
 public class Circle extends Shape {
     private final double radius;
-    final double pi = Math.PI;
+    private final double pi = Math.PI;
 
-    public Circle() {
-        this(1);
-    }
-
-    public Circle(double radius) {
+    Circle(double radius) {
         this.radius = radius;
     }
 

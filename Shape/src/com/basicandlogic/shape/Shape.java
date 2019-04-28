@@ -13,7 +13,7 @@ package com.basicandlogic.shape;
  * Ex: public class Circle extends Shape ... etc
  */
 
-public abstract class Shape {
+abstract class Shape {
 
     public abstract double area();
 
