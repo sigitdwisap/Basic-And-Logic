@@ -1,6 +1,7 @@
 package com.basicandlogic.numberstowords.All;
 
 import java.text.DecimalFormat;
+import java.util.List;
 
 class SpelledOut {
 
@@ -127,5 +128,17 @@ class SpelledOut {
 
     static String spelledInWordsWithCondition(boolean con, int number) {
         return convertWithCondition(con, number).trim();
+    }
+
+    static List<String> populateStringNumbers(boolean con, int startNumber, int endNumber) {
+        List<String> result = null;
+        try {
+            for (int i = startNumber; i <= endNumber; i++) {
+                result.add(spelledInWordsWithCondition(con, i));
+            }
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return result;
     }
 }
