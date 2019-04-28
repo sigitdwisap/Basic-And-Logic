@@ -1,14 +1,18 @@
 package com.basicandlogic.binarysearchtree;
 
+/**
+ * This code is contributed by Ankur Narain Verma
+ */
+
 // Java program to demonstrate insert operation in binary search tree
-public class BinarySearchTree {
+class BinarySearchTree {
 
     /* Class containing left and right child of current node and key value*/
     class Node {
-        int key;
+        final int key;
         Node left, right;
 
-        public Node(int item) {
+        Node(int item) {
             key = item;
             left = right = null;
         }
@@ -28,7 +32,7 @@ public class BinarySearchTree {
     }
 
     /* A recursive function to insert a new key in BST */
-    Node insertRec(Node root, int key) {
+    private Node insertRec(Node root, int key) {
 
         /* If the tree is empty, return a new node */
         if (root == null) {
@@ -54,7 +58,7 @@ public class BinarySearchTree {
     }
 
     // A utility function to do inorder traversal of BST 
-    void inorderRec(Node root) {
+    private void inorderRec(Node root) {
         if (root != null) {
             inorderRec(root.left);
             System.out.println(root.key);
@@ -62,10 +66,8 @@ public class BinarySearchTree {
         }
     }
 
-    // This code is contributed by Ankur Narain Verma
-
     // A utility function to search a given key in BST
-    public Node search(Node root, int key)
+    private Node search(Node root, int key)
     {
         // Base Cases: root is null or key is present at root
         if (root==null || root.key==key)
