@@ -1,6 +1,6 @@
 package com.basicandlogic.fizzbuzz;
 
-public class FizzBuzz {
+class FizzBuzz {
 
     FizzBuzz(int inputNumber) {
         fizzBuzz(inputNumber);

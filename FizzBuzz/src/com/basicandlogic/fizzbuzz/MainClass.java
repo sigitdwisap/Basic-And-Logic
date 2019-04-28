@@ -1,9 +1,16 @@
 package com.basicandlogic.fizzbuzz;
 
+import java.util.Scanner;
+
 public class MainClass {
 
+    private static final Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
-        FizzBuzz fizzBuzz = new FizzBuzz(20);
+        System.out.print("See result from 1 to ");
+        int number = scanner.nextInt();
+        System.out.println();
+        new FizzBuzz(number);
     }
 }
 
