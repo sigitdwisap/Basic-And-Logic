@@ -1,8 +1,8 @@
-package com.basicandlogic;
+package com.basicandlogic.car;
 
 public class HondaCity extends Car {
 
-    public HondaCity(boolean isSedan, String seats) {
+    HondaCity(boolean isSedan, String seats) {
         super(isSedan, seats);
     }
 

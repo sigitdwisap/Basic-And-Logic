@@ -1,8 +1,8 @@
-package com.basicandlogic;
+package com.basicandlogic.car;
 
 public class InnovaCrysta extends Car {
 
-    public InnovaCrysta(boolean isSedan, String seats) {
+    InnovaCrysta(boolean isSedan, String seats) {
         super(isSedan, seats);
     }
 

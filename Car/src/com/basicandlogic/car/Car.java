@@ -1,4 +1,4 @@
-package com.basicandlogic;
+package com.basicandlogic.car;
 
 abstract class Car {
     private final boolean isSedan;

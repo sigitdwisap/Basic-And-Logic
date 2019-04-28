@@ -1,4 +1,4 @@
-package com.basicandlogic;
+package com.basicandlogic.car;
 
 public class Main {
 

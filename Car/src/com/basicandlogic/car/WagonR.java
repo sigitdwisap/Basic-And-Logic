@@ -1,8 +1,8 @@
-package com.basicandlogic;
+package com.basicandlogic.car;
 
 public class WagonR extends Car {
 
-    public WagonR(boolean isSedan, String seats) {
+    WagonR(boolean isSedan, String seats) {
         super(isSedan, seats);
     }
 
