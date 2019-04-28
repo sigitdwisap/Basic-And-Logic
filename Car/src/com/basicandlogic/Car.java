@@ -1,25 +1,25 @@
 package com.basicandlogic;
 
-public abstract class Car {
-    protected boolean isSedan;
-    protected String seats;
+abstract class Car {
+    private final boolean isSedan;
+    private final String seats;
 
-    public Car(boolean isSedan, String seats) {
+    Car(boolean isSedan, String seats) {
         this.isSedan = isSedan;
         this.seats = seats;
     }
 
-    public boolean getIsSedan() {
+    private boolean getIsSedan() {
         return this.isSedan;
     }
 
-    public String getSeats() {
+    private String getSeats() {
         return this.seats;
     }
 
-    abstract public String getMileage();
+    abstract protected String getMileage();
 
-    public void printCar(String name) {
+    void printCar(String name) {
         System.out.println(
                 "A " + name + " is " + (this.getIsSedan() ? "" : "not ")
                         + "Sedan, is " + this.getSeats() + "-seater, and has a mileage of around "
