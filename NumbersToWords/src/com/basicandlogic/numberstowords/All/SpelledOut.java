@@ -59,8 +59,7 @@ class SpelledOut {
         return underTwenty[number] + " hundred" + LessThanOneHundred;
     }
 
-    private static String convert(long number) {
-
+    private static String convertWithCondition(boolean con, long number) {
         String stringResult;
 
         boolean isMinus = false;
@@ -112,11 +111,21 @@ class SpelledOut {
 
         if (isMinus) stringResult = "minus " + stringResult;
 
-        // remove extra spaces
-        return stringResult.replaceAll("^\\s+", "").replaceAll("\\b\\s{2,}\\b", " ");
+        if (con) {
+            if ((number % 3 == 0 && number % 5 == 0) || number % 3 == 0 || number % 5 == 0) {
+                // remove extra spaces
+                return stringResult.replaceAll("^\\s+", "").replaceAll("\\b\\s{2,}\\b", " ");
+            } else {
+                if (isMinus) return String.valueOf(-number);
+                else return String.valueOf(number);
+            }
+        } else {
+            // remove extra spaces
+            return stringResult.replaceAll("^\\s+", "").replaceAll("\\b\\s{2,}\\b", " ");
+        }
     }
 
-    static String spelledInWords(int number) {
-        return convert(number).trim();
+    static String spelledInWordsWithCondition(boolean con, int number) {
+        return convertWithCondition(con, number).trim();
     }
 }
