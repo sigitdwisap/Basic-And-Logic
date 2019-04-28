@@ -2,6 +2,7 @@ package com.basicandlogic.numberstowords.All;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -9,8 +10,8 @@ public class InsertIntoDB {
 
     static final String JDBC_DRIVER = "oracle.jdbc.driver.OracleDriver";
     static final String DB_URL = "jdbc:oracle:thin:@localhost:1521:xe";
-    static final String USER = ""; // set according to your oracle database
-    static final String PASS = ""; // set according to your oracle database
+    static final String USER = "sigitdwisap"; // set according to your oracle database
+    static final String PASS = "sigitdwisap"; // set according to your oracle database
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
@@ -47,8 +48,9 @@ public class InsertIntoDB {
         System.out.println();
     }
 
+    @SuppressWarnings("unchecked")
     private static List<String> getAllNumbersFromDB(ConnectionDB connectionDB) {
-        List<String> numberList = null;
+        List<String> numberList = new ArrayList();
         try {
             ResultSet resultSet = connectionDB.executeQuery("select id, angka from olah_angka order by id");
             while (resultSet.next()) {

@@ -1,6 +1,7 @@
 package com.basicandlogic.numberstowords.All;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.List;
 
 class SpelledOut {
@@ -130,8 +131,9 @@ class SpelledOut {
         return convertWithCondition(con, number).trim();
     }
 
+    @SuppressWarnings("unchecked")
     static List<String> populateStringNumbers(boolean con, int startNumber, int endNumber) {
-        List<String> result = null;
+        List<String> result = new ArrayList();
         try {
             for (int i = startNumber; i <= endNumber; i++) {
                 result.add(spelledInWordsWithCondition(con, i));
