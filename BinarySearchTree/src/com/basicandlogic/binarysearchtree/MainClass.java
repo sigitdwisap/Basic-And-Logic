@@ -19,9 +19,9 @@ public class MainClass {
         tree.insert(60);
         tree.insert(80);
 
-        System.out.println("The key of root : " + (tree.search(tree.root, 50)).key);
-        System.out.println("The key of left root : " + ((tree.search(tree.root, 50)).left).key);
-        System.out.println("The key of right root : " + ((tree.search(tree.root, 50)).right).key);
+        System.out.println("The key of root : " + (tree.searchByRootAndKey(tree.root, 50)).key);
+        System.out.println("The key of left root : " + ((tree.searchByRootAndKey(tree.root, 50)).left).key);
+        System.out.println("The key of right root : " + ((tree.searchByRootAndKey(tree.root, 50)).right).key);
 
         // print inorder traversal of the BST
         tree.inorder();

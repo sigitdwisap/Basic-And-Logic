@@ -67,7 +67,7 @@ class BinarySearchTree {
     }
 
     // A utility function to search a given key in BST
-    Node search(Node root, int key)
+    private Node search(Node root, int key)
     {
         // Base Cases: root is null or key is present at root
         if (root==null || root.key==key)
@@ -79,5 +79,9 @@ class BinarySearchTree {
 
         // val is less than root's key
         return search(root.right, key);
+    }
+
+    Node searchByRootAndKey(Node root, int key) {
+        return search(root, key);
     }
 }
