@@ -1,8 +1,8 @@
 package com.basicandlogic.reversewords;
 
-public class ReverseWords {
+class ReverseWords {
 
-    public ReverseWords(String words) {
+    ReverseWords(String words) {
         System.out.println();
         reverseWithTemporary(words);
         reverseWithoutTemporary(words);
@@ -10,9 +10,9 @@ public class ReverseWords {
     }
 
     private void reverseWithTemporary(String words) {
-        String temp = "";
+        StringBuilder temp = new StringBuilder();
         for (int i = words.length(); i > 0; i--) {
-            temp = temp + words.charAt(i-1);
+            temp.append(words.charAt(i-1));
         }
         System.out.println("Reverse with temp         : " + temp);
     }

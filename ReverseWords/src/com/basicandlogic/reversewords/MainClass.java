@@ -4,11 +4,9 @@ import java.util.Scanner;
 
 public class MainClass {
 
-    private ReverseWords reverseWords;
-
     private static final Scanner input = new Scanner(System.in);
 
-    public MainClass() {
+    private MainClass() {
         try {
             inputWord();
         } catch (Exception e) {
@@ -19,7 +17,7 @@ public class MainClass {
     private void inputWord() {
         System.out.print("Input word : ");
         String words = input.nextLine();
-        reverseWords = new ReverseWords(words);
+        new ReverseWords(words);
     }
 
     public static void main(String[] args) {
