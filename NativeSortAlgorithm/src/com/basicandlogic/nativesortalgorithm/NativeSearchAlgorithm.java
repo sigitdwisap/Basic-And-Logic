@@ -1,28 +1,32 @@
 package com.basicandlogic.nativesortalgorithm;
 
+import java.util.Arrays;
+
 class NativeSearchAlgorithm {
 
     NativeSearchAlgorithm(String[] arItems) {
         int[] ar = createArrayOfInt(arItems);
-        int[] sortedArray = new int[ar.length];
 
-        for (int left = 0; left < ar.length; left++) {
-            int greaterIndex = 0;
-            for (int right = 0; right < ar.length; right++) {
-                if (ar[left] > ar[right]) {
-                    greaterIndex++;
+        //Bubble Sort
+        int i = 0, n = ar.length;
+        boolean swapNeeded = true;
+        while (i < n - 1 && swapNeeded) {
+            swapNeeded = false;
+            for (int j = 1; j < n - i; j++) {
+                if (ar[j - 1] > ar[j]) {
+                    int temp = ar[j - 1];
+                    ar[j - 1] = ar[j];
+                    ar[j] = temp;
+                    swapNeeded = true;
                 }
             }
-            while (sortedArray[greaterIndex] == ar[left]) {
-                greaterIndex++;
+            if (!swapNeeded) {
+                break;
             }
-            sortedArray[greaterIndex] = ar[left];
+            i++;
         }
 
-
-        for (int a : sortedArray) {
-            System.out.print(a + " ");
-        }
+        System.out.print(Arrays.toString(ar));
     }
 
     private int[] createArrayOfInt(String[] arItems) {
